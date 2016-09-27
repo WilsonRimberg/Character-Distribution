@@ -68,7 +68,7 @@ def compare(a, b):
     """
     compare - generic comparison function for testing two elements.
     """
-    return b > a
+    return b <= a
 
 
 def bsort(seq, cmp):
@@ -87,6 +87,7 @@ def bsort(seq, cmp):
                     seq[index-1], seq[index] = seq[index], seq[index-1] # and swap it
 
 
-tosort = [acount, bcount, c]
-bsort(tosort, compare)
-print(tosort)
+tosort = [acount, bcount, ccount, dcount, ecount, fcount, gcount, hcount, icount, jcount, kcount, lcount, mcount, ncount, ocount, pcount, qcount, rcount, scount, tcount, ucount, vcount, wcount, xcount, ycount, zcount]
+hello=zip(tosort, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'])
+bsort(hello, compare)
+print(hello)
