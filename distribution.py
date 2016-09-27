@@ -36,3 +36,57 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
+sentence=input("Please enter a string of text (the bigger the better): ")
+print('The distribtuion of characters in "'+sentence+'" is: ')
+acount= sentence.count('a')
+bcount=sentence.count('b')
+ccount= sentence.count('c')
+dcount=sentence.count('d')
+ecount=sentence.count('e')
+fcount= sentence.count('f')
+gcount=sentence.count('g')
+hcount=sentence.count('h')
+icount=sentence.count('i')
+jcount=sentence.count('j')
+kcount=sentence.count('k')
+lcount=sentence.count('l')
+mcount=sentence.count('m')
+ncount=sentence.count('n')
+ocount=sentence.count('o')
+pcount=sentence.count('p')
+qcount=sentence.count('q')
+rcount=sentence.count('r')
+scount=sentence.count('s')
+tcount=sentence.count('t')
+ucount=sentence.count('u')
+vcount=sentence.count('v')
+wcount=sentence.count('w')
+xcount=sentence.count('x')
+ycount=sentence.count('y')
+zcount=sentence.count('z')
+def compare(a, b):
+    """
+    compare - generic comparison function for testing two elements.
+    """
+    return b > a
+
+
+def bsort(seq, cmp):
+    """
+    bsort - simple sorting algorithm that uses any comparison function
+    seq - a list to be sorted
+    cmp - a function for comparing two elements of seq
+    """
+    sorted = False  # assume the seq is not sorted to start with
+    while not sorted:
+        sorted = True   # assume it's already sorted correctly
+        for index, value in enumerate(seq): # for every element in seq
+            if index > 0:                   # past the first..
+                if not cmp(seq[index-1], value):  # if this element is out of order
+                    sorted = False          # then the list is not sorted yet
+                    seq[index-1], seq[index] = seq[index], seq[index-1] # and swap it
+
+
+tosort = [acount, bcount, c]
+bsort(tosort, compare)
+print(tosort)
