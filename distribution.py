@@ -36,8 +36,9 @@ Notice about this example:
   in the text and they are listed in the output in alphabetical order.
 * Letters that do not occur in the text are not listed in the output at all.
 """
-sentence=input("Please enter a string of text (the bigger the better): ")
-print('The distribtuion of characters in "'+sentence+'" is: ')
+words=input("Please enter a string of text (the bigger the better): ")
+print('The distribtuion of characters in "'+words+'" is: ')
+sentence=words.lower()
 acount= sentence.count('a')
 bcount=sentence.count('b')
 ccount= sentence.count('c')
@@ -88,6 +89,7 @@ def bsort(seq, cmp):
 
 
 tosort = [acount, bcount, ccount, dcount, ecount, fcount, gcount, hcount, icount, jcount, kcount, lcount, mcount, ncount, ocount, pcount, qcount, rcount, scount, tcount, ucount, vcount, wcount, xcount, ycount, zcount]
-hello=zip(tosort, ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'])
+letters=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+hello=list(zip(tosort,letters))
 bsort(hello, compare)
 print(hello)
