@@ -1,7 +1,7 @@
 """
 distribution.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Wilson
+Credit: Johannes
 
 Assignment:
 
@@ -37,7 +37,7 @@ Notice about this example:
 * Letters that do not occur in the text are not listed in the output at all.
 """
 words=input("Please enter a string of text (the bigger the better): ")
-print('The distribtuion of characters in "'+words+'" is: ')
+print('The distribution of characters in "'+words+'" is: ')
 sentence=words.lower()
 acount= sentence.count('a')
 bcount=sentence.count('b')
@@ -92,9 +92,9 @@ tosort = [acount, bcount, ccount, dcount, ecount, fcount, gcount, hcount, icount
 letters=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 hello=list(zip(tosort,letters))
 bsort(hello, compare)
-nums = [x for x in range(1,27)]
-rnums = nums[::-1]
-workplz=(zip(tosort,rnums,letters))
+numbers = [x for x in range(1,27)]
+rnumbers = numbers[::-1]
+workplz=(zip(tosort,rnumbers,letters))
 plz = [x for x in workplz]
 plz.sort(reverse=True)
 c = 0
