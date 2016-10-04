@@ -92,4 +92,12 @@ tosort = [acount, bcount, ccount, dcount, ecount, fcount, gcount, hcount, icount
 letters=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 hello=list(zip(tosort,letters))
 bsort(hello, compare)
-print(hello)
+nums = [x for x in range(1,27)]
+rnums = nums[::-1]
+workplz=(zip(tosort,rnums,letters))
+plz = [x for x in workplz]
+plz.sort(reverse=True)
+c = 0
+while c < 26 and plz[c][0] != 0:
+    print(str(plz[c][2])*int(plz[c][0]))
+    c = c + 1
